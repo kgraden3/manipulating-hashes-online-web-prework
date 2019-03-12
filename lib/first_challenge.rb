@@ -16,7 +16,9 @@ def first_challenge
   contacts.each do |name, data|
     data.each do |attribute, value|
       if attribute == :favorite_icecream_flavors && value == "strawberry"
-        attribute.pop(value)
+        value.each do |flavor|
+          value.pop(flavor)
+        end
       end
     end
   end
